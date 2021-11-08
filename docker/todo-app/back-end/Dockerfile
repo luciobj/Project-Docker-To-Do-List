@@ -1,7 +1,6 @@
-FROM node:lts AS build
-WORKDIR /todo-app/back-end
-COPY package*.json ./
-RUN npm install
+FROM node:alpine AS build
+WORKDIR /app
+EXPOSE 3001
 COPY . .
-RUN npm start
-RUN npm run build
+ADD ./node_modules.tar.gz ./
+ENTRYPOINT ["npm", "start"]

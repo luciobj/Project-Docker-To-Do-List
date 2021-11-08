@@ -1,6 +1,5 @@
-FROM node:lts AS build
-WORKDIR /todo-app/tests
-COPY package*.json ./
-RUN npm install
+FROM node:alpine AS build
+WORKDIR /app
 COPY . .
-RUN npm run build
+ADD ./node_modules.tar.gz ./
+ENTRYPOINT ["npm", "test"]
