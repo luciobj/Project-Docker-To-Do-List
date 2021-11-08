@@ -1,4 +1,4 @@
-FROM node:alpine AS build
+FROM node:alpine
 WORKDIR /app
 EXPOSE 3000
 COPY . .
