@@ -19,8 +19,8 @@ Copy the ssh from the project `git@github.com:luciobj/Project-Docker-To-Do-List.
 * Open a terminal int your machine and type the following commands in order:
 
   * `git clone git@github.com:luciobj/Project-Docker-To-Do-List.git`
-  * `cd Project-Docker-To-Do-List`
-  * `npm install`
+  * `cd Project-Docker-To-Do-List/docker`
+  * `docker-compose up -d`
 
 ---
 
